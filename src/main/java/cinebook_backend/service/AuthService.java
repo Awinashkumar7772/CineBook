@@ -7,7 +7,7 @@ import cinebook_backend.dto.response.AuthResponse;
 import cinebook_backend.entity.User;
 import cinebook_backend.exception.ResourceNotFoundException;
 import cinebook_backend.repository.UserRepository;
-import cinebook_backend.security.JwtUtil;
+import cinebook_backend.security.jwtUtil;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ public class AuthService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
-    private final JwtUtil jwtUtil;
+    private final jwtUtil jwtUtil;
 
     public ApiResponse<AuthResponse> register(RegisterRequest request) {
 
